@@ -26,6 +26,22 @@
       <version>5.9.1</version>
       <scope>test</scope>
     </dependency>
+
+
+    <dependency>
+      <!-- logger -->
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.7</version>
+    </dependency>
+
+    <dependency>
+      <!-- logger -->
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-core</artifactId>
+      <version>1.4.7</version>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -36,7 +52,6 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0</version>
       </plugin>
-
 
       <plugin>
         <!-- テストカバレッジレポートの出力 -->
