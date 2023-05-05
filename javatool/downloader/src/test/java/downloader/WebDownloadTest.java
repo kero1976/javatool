@@ -1,5 +1,7 @@
 package downloader;
 
+import static org.assertj.core.api.Assertions.*;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -13,13 +15,15 @@ public class WebDownloadTest {
     WebClient webClient;
 
     @BeforeEach
-    private void setup() {
+    void setup() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
     void testGetXml() {
+    	
         WebDownload sts = new WebDownload(webClient);
-        sts.getXml("a");
+        String result = sts.getXml("a");
+        assertThat(result).isEqualTo("AAA");
     }
 }
